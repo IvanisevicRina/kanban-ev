@@ -105,4 +105,11 @@ public class Player implements Serializable {
     public String toString() {
         return name;
     }
+
+    public void removeScore(int points) {
+        if(points<=0){
+            throw new IllegalArgumentException("Broj bodova mora bit veći od nula");
+        }
+        score = Math.max(0, score-points);
+    }
 }
