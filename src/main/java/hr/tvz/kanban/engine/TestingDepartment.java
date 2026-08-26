@@ -3,7 +3,7 @@ package hr.tvz.kanban.engine;
 import hr.tvz.kanban.model.*;
 
 public class TestingDepartment extends Department{
-    protected TestingDepartment(String name, DepartmentType type) {
+    protected TestingDepartment() {
         super("Testiranje", DepartmentType.TESTING);
     }
 

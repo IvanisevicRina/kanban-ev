@@ -6,7 +6,7 @@ import hr.tvz.kanban.model.GameState;
 import hr.tvz.kanban.model.Player;
 
 public class LogisticsDepartment extends Department{
-    protected LogisticsDepartment(String name, DepartmentType type) {
+    protected LogisticsDepartment() {
         super("Logistika", DepartmentType.LOGISTICS);
     }
 

@@ -9,7 +9,7 @@ public class AssemblyDepartment extends Department{
 
 
 
-    protected AssemblyDepartment(String name, DepartmentType type) {
+    protected AssemblyDepartment() {
         super("Montaža", DepartmentType.ASSEMBLY);
     }
 
