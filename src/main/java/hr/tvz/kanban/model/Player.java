@@ -38,10 +38,18 @@ public class Player implements Serializable {
         components++;
     }
     public boolean useDesignPoints(int amount){
-        if(amount<=0 || components<amount){
+        if(amount<=0 || designPoints<amount){
             return false;
         }
-        components=amount-components;
+        designPoints=designPoints-amount;
+        return true;
+    }
+
+    public boolean useComponents(int amount){
+        if (amount <0 || components <amount){
+            return false;
+        }
+        components = components-amount;
         return true;
     }
     public void addCar(Car car){
