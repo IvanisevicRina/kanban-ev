@@ -8,17 +8,19 @@
    <children>
 
           <Label layoutX="310.0" layoutY="63.0" text="Kanban EV" textAlignment="CENTER">
-         <font>
-            <Font size="38.0" />
-         </font></Label>
+             <font>
+                <Font size="38.0" />
+            </font>
+          </Label>
           <Label fx:id="weekLabel" layoutX="166.0" layoutY="195.0" text="Trenutačni tjedan">
-         <font>
-            <Font size="16.0" />
-         </font></Label>
+              <font>
+                  <Font size="16.0" />
+              </font></Label>
           <Label fx:id="playersLabel" layoutX="184.0" layoutY="300.0" text="Igrači">
-         <font>
-            <Font size="17.0" />
-         </font></Label>
+            <font>
+                <Font size="17.0" />
+             </font>
+          </Label>
 
    </children>
 

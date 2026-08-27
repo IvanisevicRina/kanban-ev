@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="hr.tvz.kanban.controller.PlayerSetupController"
+            prefHeight="600.0" prefWidth="800.0">
+
+    <Label layoutX="310.0" layoutY="63.0" text="Kanban EV" textAlignment="CENTER">
+        <font>
+            <Font size="38.0" />
+        </font>
+    </Label>
+    <Label layoutX="296.0"
+           layoutY="125.0"
+           text="Unesite imena igrača">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Label>
+
+    <Label layoutX="205.0"
+           layoutY="191.0"
+           text="Prvi igrač:"/>
+
+    <TextField fx:id="firstPlayerField"
+               layoutX="310.0"
+               layoutY="185.0"
+               prefHeight="30.0"
+               prefWidth="280.0"
+               promptText="Obavezno ime"/>
+
+    <Label layoutX="205.0"
+           layoutY="241.0"
+           text="Drugi igrač:"/>
+
+    <TextField fx:id="secondPlayerField"
+               layoutX="310.0"
+               layoutY="235.0"
+               prefHeight="30.0"
+               prefWidth="280.0"
+               promptText="Obavezno ime"/>
+
+    <Label layoutX="205.0"
+           layoutY="291.0"
+           text="Treći igrač:"/>
+
+    <TextField fx:id="thirdPlayerField"
+               layoutX="310.0"
+               layoutY="285.0"
+               prefHeight="30.0"
+               prefWidth="280.0"
+               promptText="Neobavezno"/>
+
+    <Label layoutX="205.0"
+           layoutY="341.0"
+           text="Četvrti igrač:"/>
+
+    <TextField fx:id="fourthPlayerField"
+               layoutX="310.0"
+               layoutY="335.0"
+               prefHeight="30.0"
+               prefWidth="280.0"
+               promptText="Neobavezno"/>
+
+    <Label fx:id="validationLabel"
+           layoutX="205.0"
+           layoutY="390.0"
+           prefWidth="385.0"
+           textFill="#c62828"/>
+
+    <Button fx:id="startGameButton"
+            layoutX="325.0"
+            layoutY="435.0"
+            mnemonicParsing="false"
+            prefHeight="40.0"
+            prefWidth="150.0"
+            text="Pokreni igru"/>
+
+</AnchorPane>
