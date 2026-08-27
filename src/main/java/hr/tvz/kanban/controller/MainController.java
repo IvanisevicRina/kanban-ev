@@ -17,11 +17,7 @@ public class MainController {
 
     private KanbanEngine kanbanEngine;
 
-    @FXML
-    private void initialize(){
-        initializeGame();
-        refreshView();
-    }
+
 
     private void refreshView() {
 
@@ -29,20 +25,14 @@ public class MainController {
         String playerNames = gameState.getPlayers().stream().map(Player::getName).reduce((firstName, secondName)-> firstName + ", "+ secondName).orElse("Nema igrača");
         playersLabel.setText("Igrači: " + playerNames);
 
-
-    }
-
-    private void initializeGame() {
-        gameState = new GameState();
-
-        Player firstPlayer = new Player("player - 1", "Rina");
-        Player secondPlayer = new Player("player-2", "Frane");
-
-        gameState.addPlayer(firstPlayer);
-        gameState.addPlayer(secondPlayer);
-
-
     }
 
 
+
+    public void setGameState(GameState gameState) {
+        this.gameState = gameState;
+        this.kanbanEngine = kanbanEngine;
+        refreshView();
+
+    }
 }

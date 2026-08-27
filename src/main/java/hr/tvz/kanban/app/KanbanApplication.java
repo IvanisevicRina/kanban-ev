@@ -9,7 +9,7 @@ public class KanbanApplication extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(KanbanApplication.class.getResource("/hr/tvz/kanban/view/main-view.fxml"));
+        FXMLLoader loader = new FXMLLoader(KanbanApplication.class.getResource("/hr/tvz/kanban/view/player-setup-view.fxml"));
 
 
         Scene scene = new Scene(loader.load(),800,600);
