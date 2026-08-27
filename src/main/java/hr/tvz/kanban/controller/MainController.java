@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 
 public class MainController {
 
@@ -38,7 +39,6 @@ public class MainController {
     @FXML
     private Button assemblyButton;
 
-
     @FXML
     private Label gameResultLabel;
 
@@ -51,8 +51,6 @@ public class MainController {
     private KanbanEngine kanbanEngine;
 
     private int currentPlayerIndex;
-
-
 
     private void refreshView() {
 
@@ -71,6 +69,8 @@ public class MainController {
 
         playerStatsLabel.setText("Bodovi: " + currentPlayer.getScore() + " Dizajn: " + currentPlayer.getDesignPoints() + " Komponente: "+ currentPlayer.getComponents()+ " Automobili: " + currentPlayer.getCars().size());
 
+
+
         String sandraMessage = gameState.getLastSandraMessage();
 
         if (sandraMessage==null || sandraMessage.isBlank()){
@@ -86,8 +86,17 @@ public class MainController {
             gameResultLabel.setText("");
             setGameButtonsDisabled(false);
         }
+    }
 
+    private String getCarStatus(boolean assembled, boolean tested) {
 
+        if(tested){
+            return "Testiran";
+        }
+        if(assembled){
+            return "Sastavljen";
+        }
+        return "u izradi";
     }
 
     private void setGameButtonsDisabled(boolean disabled) {
@@ -97,10 +106,6 @@ public class MainController {
         assemblyButton.setDisable(disabled);
         testingButton.setDisable(disabled);
         carModelComboBox.setDisable(disabled);
-
-
-
-
     }
 
     private void showGameResult() {
@@ -122,21 +127,15 @@ public class MainController {
         }else {
             gameResultLabel.setText("Igra je završila izjednačeno. Pobjedničko mjesto dijele : " + winnerNames +" sa osvojenih "+highestScore);
         }
-
-
-
     }
-
     @FXML
     private void selectDesign() {
         performDepartmentAction(DepartmentType.DESIGN);
     }
-
     @FXML
     private void selectLogistics() {
         performDepartmentAction(DepartmentType.LOGISTICS);
     }
-
     @FXML
     private void selectAssembly() {
         CarModel selectedCar = carModelComboBox.getValue();
@@ -150,15 +149,11 @@ public class MainController {
 
         performDepartmentAction(DepartmentType.ASSEMBLY);
     }
-
     @FXML
     private void selectTesting() {
         performDepartmentAction(DepartmentType.TESTING);
     }
-
-
     private void performDepartmentAction(DepartmentType departmentType){
-
         Player currentPlayer = getCurrentPlayer();
         ActionResult result = kanbanEngine.performAction(currentPlayer.getId(),departmentType);
         actionResultLabel.setText(result.message());
@@ -166,9 +161,7 @@ public class MainController {
             moveToNextPlayer();
         }
         refreshView();
-
     }
-
     private void moveToNextPlayer() {
         currentPlayerIndex++;
         if(currentPlayerIndex >=gameState.getPlayers().size()){
@@ -176,27 +169,16 @@ public class MainController {
         }
         carModelComboBox.setValue(null);
     }
-
     private Player getCurrentPlayer() {
         return gameState.getPlayers().get(currentPlayerIndex);
     }
-
-
     public void setGameState(GameState gameState) {
         this.gameState = gameState;
         this.kanbanEngine = new KanbanEngine(gameState);
         this.currentPlayerIndex=0;
-
         carModelComboBox.getItems().setAll(CarModel.values());
-
         carModelComboBox.setValue(CarModel.CITY);
-
         actionResultLabel.setText("");
         refreshView();
-
     }
-
-
-
-
 }

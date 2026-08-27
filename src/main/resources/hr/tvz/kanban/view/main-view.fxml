@@ -14,22 +14,22 @@
                 <Font size="38.0" />
             </font>
           </Label>
-          <Label fx:id="weekLabel" layoutX="166.0" layoutY="195.0" text="Trenutačni tjedan">
+          <Label fx:id="weekLabel" layoutX="91.0" layoutY="198.0" text="Trenutačni tjedan">
               <font>
                   <Font size="16.0" />
               </font></Label>
-          <Label fx:id="playersLabel" layoutX="165.0" layoutY="247.0" text="Igrači">
+          <Label fx:id="playersLabel" layoutX="98.0" layoutY="246.0" text="Igrači">
             <font>
                 <Font size="17.0" />
              </font>
           </Label>
-       <Label fx:id="currentPlayerLabel" layoutX="160.0" layoutY="300.0" text="Na potezu">
+       <Label fx:id="currentPlayerLabel" layoutX="98.0" layoutY="300.0" text="Na potezu">
            <font>
                <Font size="20.0" />
            </font>
        </Label>
 
-       <Label fx:id="playerStatsLabel" layoutX="347.0" layoutY="349.0" text="Podaci o igraču" />
+       <Label fx:id="playerStatsLabel" layoutX="378.0" layoutY="168.0" prefHeight="96.0" prefWidth="335.0" text="Podaci o igraču" />
 
        <Button fx:id="designButton" layoutX="165.0" layoutY="430.0" mnemonicParsing="false" onAction="#selectDesign" text="Dizajn" />
 
@@ -43,7 +43,7 @@
 
        <Label fx:id="sandraMessageLabel" layoutX="165.0" layoutY="535.0" text="Sandra još nije izvršila tjednu evaluaciju." wrapText="true" />
 
-       <Label fx:id="gameResultLabel" layoutX="165.0" layoutY="565.0" />
+       <Label fx:id="gameResultLabel" layoutX="367.0" layoutY="287.0" prefHeight="73.0" prefWidth="366.0" />
 
 
        <ComboBox fx:id="carModelComboBox" layoutX="400.0" layoutY="473.0" prefWidth="150.0" promptText="OdaberiModel" />

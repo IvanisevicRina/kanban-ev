@@ -45,10 +45,21 @@ public class SandraAI {
 
 
    }
-   @EvaluationRule(description = "Izračun napretka igrača", condition = "Dizajn + komponente + automobil*3 + testirani automobili * 2")
+   @EvaluationRule(description = "Izračun napretka igrača", condition = "Dizajn + komponente + vrijednost auta + testirani automobili * 2")
 
    private int calculateProgress(Player player){
-       long testedCars = player.getCars().stream().filter(car->car.isTested()).count();
-       return player.getDesignPoints() + player.getComponents() + player.getCars().size()*3 +(int) testedCars*2;
+
+        int carProgress = player.getCars()
+                .stream()
+                .mapToInt(car ->car.getModel().getAssemblyPoints())
+                .sum();
+
+        long testedCars = player.getCars()
+                .stream()
+                .filter(car -> car.isTested())
+                .count();
+
+        return player.getDesignPoints() + player.getComponents() + carProgress + (int) testedCars*2;
+
    }
 }
