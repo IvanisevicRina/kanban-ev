@@ -48,7 +48,7 @@ public class KanbanEngine {
         ActionResult result = department.performAction(player, gameState);
 
         if (result.successful()){
-            saveAction(playerID, departmentType, result.message());
+            saveAction(player, departmentType, result.message());
             playerWhoActed.add(playerID);
             if(haveAllPlayersActed()){
                 completeWeek();
@@ -61,7 +61,14 @@ public class KanbanEngine {
 
     private void completeWeek() {
         int completedWeek = gameState.getCurrentWeek();
-        SandraEvaluation evaluation = sandraAI.evaluatePlayers(gameState.getPlayers(), completedWeek);
+
+        List<WeekAction> weeklyActions = actionHistory.stream()
+                        .filter(action->action.weekNumber() == completedWeek).toList();
+
+        SandraEvaluation evaluation = sandraAI.evaluatePlayers(gameState.getPlayers(), weeklyActions,completedWeek);
+
+
+
         evaluationHistory.add(evaluation);
         gameState.setLastSandraMessage(evaluation.message());
         gameState.nextWeek();
@@ -72,10 +79,22 @@ public class KanbanEngine {
         return !gameState.getPlayers().isEmpty() && playerWhoActed.size()==gameState.getPlayers().size();
     }
 
-    private void saveAction(String playerID, DepartmentType departmentType, String description) {
-        WeekAction action = new WeekAction(playerID, departmentType, gameState.getCurrentWeek(), description);
+    private void saveAction(Player player, DepartmentType departmentType, String description) {
+
+        int performancePoints = calculateActionPoint(player, departmentType);
+        WeekAction action = new WeekAction(player.getId(), departmentType, gameState.getCurrentWeek(), description, performancePoints);
         actionHistory.add(action);
     }
+
+    public int calculateActionPoint(Player player, DepartmentType departmentType){
+        return switch (departmentType){
+            case DESIGN,LOGISTICS -> 1;
+            case ASSEMBLY -> player.getSelectedCarModel().getAssemblyPoints();
+            case TESTING -> 2;
+        };
+    }
+
+
 
     private Player findPlayer(String playerID) {
         return gameState.getPlayers().stream().filter(player -> player.getId().equals(playerID)).findFirst().orElse(null);
