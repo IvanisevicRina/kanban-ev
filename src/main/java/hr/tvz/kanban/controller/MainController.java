@@ -2,13 +2,11 @@ package hr.tvz.kanban.controller;
 
 import hr.tvz.kanban.engine.Department;
 import hr.tvz.kanban.engine.KanbanEngine;
-import hr.tvz.kanban.model.ActionResult;
-import hr.tvz.kanban.model.DepartmentType;
-import hr.tvz.kanban.model.GameState;
-import hr.tvz.kanban.model.Player;
+import hr.tvz.kanban.model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 
 public class MainController {
@@ -41,6 +39,9 @@ public class MainController {
 
     @FXML
     private Button testingButton;
+
+    @FXML
+    private ComboBox<CarModel> carModelComboBox;
 
     private GameState gameState;
 
@@ -90,6 +91,15 @@ public class MainController {
 
     @FXML
     private void selectAssembly() {
+        CarModel selectedCar = carModelComboBox.getValue();
+
+        if(selectedCar==null){
+            actionResultLabel.setText("Prije montaže odaberi model auta");
+            return;
+        }
+        Player currentPlayer = getCurrentPlayer();
+        currentPlayer.setSelectedCarModel(selectedCar);
+
         performDepartmentAction(DepartmentType.ASSEMBLY);
     }
 
@@ -127,6 +137,10 @@ public class MainController {
         this.gameState = gameState;
         this.kanbanEngine = new KanbanEngine(gameState);
         this.currentPlayerIndex=0;
+
+        carModelComboBox.getItems().setAll(CarModel.values());
+
+        carModelComboBox.setValue(CarModel.CITY);
 
         actionResultLabel.setText("");
         refreshView();

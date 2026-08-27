@@ -17,11 +17,13 @@ public class Player implements Serializable {
     private int warnings;
 
     private DepartmentType currentDepartment;
+    private CarModel selectedCarModel;
 
     public Player(String id, String name) {
         this.id = Objects.requireNonNull(id);
         this.name = Objects.requireNonNull(name);
         this.cars= new ArrayList<>();
+
 
     }
     public void addScore(int points){
@@ -99,6 +101,14 @@ public class Player implements Serializable {
 
     public DepartmentType getCurrentDepartment() {
         return currentDepartment;
+    }
+
+    public CarModel getSelectedCarModel() {
+        return selectedCarModel;
+    }
+
+    public void setSelectedCarModel(CarModel selectedCarModel) {
+        this.selectedCarModel = selectedCarModel;
     }
 
     @Override
