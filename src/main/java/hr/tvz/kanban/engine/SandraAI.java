@@ -21,44 +21,24 @@ public class SandraAI {
        }
         int highestProgress = players
                 .stream()
-                .mapToInt(player ->
-                        calculateWeeklyProgress(
-                                player,
-                                weeklyActions
-                        )
-                )
+                .mapToInt(player -> calculateWeeklyProgress(player, weeklyActions))
                 .max()
                 .orElse(0);
 
         int lowestProgress = players
                 .stream()
-                .mapToInt(player ->
-                        calculateWeeklyProgress(
-                                player,
-                                weeklyActions
-                        )
-                )
+                .mapToInt(player -> calculateWeeklyProgress(player, weeklyActions))
                 .min()
                 .orElse(0);
 
         List<Player> bestPlayers = players
                 .stream()
-                .filter(player ->
-                        calculateWeeklyProgress(
-                                player,
-                                weeklyActions
-                        ) == highestProgress
-                )
+                .filter(player -> calculateWeeklyProgress(player, weeklyActions) == highestProgress)
                 .toList();
 
         List<Player> weakestPlayers = players
                 .stream()
-                .filter(player ->
-                        calculateWeeklyProgress(
-                                player,
-                                weeklyActions
-                        ) == lowestProgress
-                )
+                .filter(player -> calculateWeeklyProgress(player, weeklyActions) == lowestProgress)
                 .toList();
 
        if (highestProgress == lowestProgress || bestPlayers.size()>1 || weakestPlayers.size()>1){

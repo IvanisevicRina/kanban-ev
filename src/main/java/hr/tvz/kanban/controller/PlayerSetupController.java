@@ -17,16 +17,7 @@ import java.util.List;
 public class PlayerSetupController {
 
     @FXML
-    private TextField firstPlayerField;
-
-    @FXML
-    private TextField secondPlayerField;
-
-    @FXML
-    private TextField thirdPlayerField;
-
-    @FXML
-    private TextField fourthPlayerField;
+    private TextField firstPlayerField, secondPlayerField, thirdPlayerField, fourthPlayerField;
 
     @FXML
     private Button startGameButton;
@@ -89,7 +80,6 @@ public class PlayerSetupController {
         }
         validationLabel.setText("");
         return true;
-
 
     }
 

@@ -56,7 +56,6 @@ public class KanbanEngine {
         }
         return result;
 
-
     }
 
     private void completeWeek() {
@@ -66,8 +65,6 @@ public class KanbanEngine {
                         .filter(action->action.weekNumber() == completedWeek).toList();
 
         SandraEvaluation evaluation = sandraAI.evaluatePlayers(gameState.getPlayers(), weeklyActions,completedWeek);
-
-
 
         evaluationHistory.add(evaluation);
         gameState.setLastSandraMessage(evaluation.message());
@@ -94,8 +91,6 @@ public class KanbanEngine {
         };
     }
 
-
-
     private Player findPlayer(String playerID) {
         return gameState.getPlayers().stream().filter(player -> player.getId().equals(playerID)).findFirst().orElse(null);
     }
@@ -108,7 +103,4 @@ public class KanbanEngine {
         return List.copyOf(actionHistory);
     }
 
-    public GameState getGameState() {
-        return gameState;
-    }
 }

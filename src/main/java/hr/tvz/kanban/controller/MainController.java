@@ -1,47 +1,18 @@
 package hr.tvz.kanban.controller;
-
 import hr.tvz.kanban.engine.KanbanEngine;
 import hr.tvz.kanban.model.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
 
 public class MainController {
 
     @FXML
-    private Label weekLabel;
-
-    @FXML Label playersLabel;
+    private Label weekLabel, playersLabel, currentPlayerLabel, playerStatsLabel,actionResultLabel, sandraMessageLabel, gameResultLabel;
 
     @FXML
-    private Label currentPlayerLabel;
-
-    @FXML
-    private Label playerStatsLabel;
-
-    @FXML
-    private Label actionResultLabel;
-
-    @FXML
-    private Label sandraMessageLabel;
-
-    @FXML
-    private Button designButton;
-
-    @FXML
-    private Button testingButton;
-
-    @FXML
-    private Button logisticsButton;
-
-    @FXML
-    private Button assemblyButton;
-
-    @FXML
-    private Label gameResultLabel;
-
+    private Button testingButton,logisticsButton,assemblyButton, designButton;
 
     @FXML
     private ComboBox<CarModel> carModelComboBox;
@@ -69,8 +40,6 @@ public class MainController {
 
         playerStatsLabel.setText("Bodovi: " + currentPlayer.getScore() + " Dizajn: " + currentPlayer.getDesignPoints() + " Komponente: "+ currentPlayer.getComponents()+ " Automobili: " + currentPlayer.getCars().size());
 
-
-
         String sandraMessage = gameState.getLastSandraMessage();
 
         if (sandraMessage==null || sandraMessage.isBlank()){
@@ -88,16 +57,6 @@ public class MainController {
         }
     }
 
-    private String getCarStatus(boolean assembled, boolean tested) {
-
-        if(tested){
-            return "Testiran";
-        }
-        if(assembled){
-            return "Sastavljen";
-        }
-        return "u izradi";
-    }
 
     private void setGameButtonsDisabled(boolean disabled) {
 

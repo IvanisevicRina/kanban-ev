@@ -4,17 +4,9 @@ import hr.tvz.kanban.model.*;
 
 public class AssemblyDepartment extends Department{
 
-
-
-
-
     protected AssemblyDepartment() {
         super("Montaža", DepartmentType.ASSEMBLY);
     }
-
-
-
-
 
     @Override
     public ActionResult performAction(Player player, GameState gameState) {
