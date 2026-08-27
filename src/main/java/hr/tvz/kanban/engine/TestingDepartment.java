@@ -9,12 +9,12 @@ public class TestingDepartment extends Department{
 
     @Override
     public ActionResult performAction(Player player, GameState gameState) {
-        player.setCurrentDepartment(DepartmentType.TESTING);
+
         for (Car car : player.getCars()){
             if(car.isAssembled() && !car.isTested()){
+                player.setCurrentDepartment(DepartmentType.TESTING);
                 car.markAsTested();
                 player.addScore(2);
-
                 String message = player.getName() + " je testirao auto " + car.getModel()+ " i dobio 2 boda za to";
                 return new ActionResult(true, message);
             }

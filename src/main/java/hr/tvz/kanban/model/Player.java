@@ -28,7 +28,7 @@ public class Player implements Serializable {
         if(points<=0){
             throw new IllegalArgumentException("Broj bodova mora biti veći od nule");
         }
-        score=Math.max(0,score-points);
+        score=score + points;
     }
 
     public void addDesignPoints(){
@@ -110,6 +110,6 @@ public class Player implements Serializable {
         if(points<=0){
             throw new IllegalArgumentException("Broj bodova mora bit veći od nula");
         }
-        score = Math.max(0, score-points);
+        score = score - points;
     }
 }

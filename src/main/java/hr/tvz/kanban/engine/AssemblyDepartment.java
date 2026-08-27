@@ -15,11 +15,12 @@ public class AssemblyDepartment extends Department{
 
     @Override
     public ActionResult performAction(Player player, GameState gameState) {
-        player.setCurrentDepartment(DepartmentType.ASSEMBLY);
+
         if (player.getDesignPoints() < REQUIRED_DESIGN_POINTS || player.getComponents() <REQUIRED_COMPONENTS){
             String message = player.getName() + " nema dovoljno resursa za montažu";
             return new ActionResult(false, message );
         }
+        player.setCurrentDepartment(DepartmentType.ASSEMBLY);
         player.useDesignPoints(REQUIRED_DESIGN_POINTS);
         player.useComponents(REQUIRED_COMPONENTS);
 
