@@ -4,6 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.control.Button?>
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.tvz.kanban.controller.MainController">
    <children>
 
@@ -21,6 +22,25 @@
                 <Font size="17.0" />
              </font>
           </Label>
+       <Label fx:id="currentPlayerLabel" layoutX="165.0" layoutY="350.0" text="Na potezu">
+           <font>
+               <Font size="20.0"/>
+           </font>
+       </Label>
+
+       <Label fx:id="playerStatsLabel" layoutX="165.0" layoutY="390.0" prefWidth="550.0" text="Podaci o igraču"/>
+
+       <Button fx:id="designButton" layoutX="165.0" layoutY="430.0" mnemonicParsing="false" onAction="#selectDesign" prefWidth="120.0" text="Dizajn"/>
+
+       <Button fx:id="logisticsButton" layoutX="300.0" layoutY="430.0" mnemonicParsing="false" onAction="#selectLogistics" prefWidth="120.0" text="Logistika"/>
+
+       <Button fx:id="assemblyButton" layoutX="435.0" layoutY="430.0" mnemonicParsing="false" onAction="#selectAssembly" prefWidth="120.0" text="Montaža"/>
+
+       <Button fx:id="testingButton" layoutX="570.0" layoutY="430.0" mnemonicParsing="false" onAction="#selectTesting" prefWidth="120.0" text="Testiranje"/>
+
+       <Label fx:id="actionResultLabel" layoutX="165.0" layoutY="485.0" prefWidth="525.0" textFill="#1565c0" wrapText="true"/>
+
+       <Label fx:id="sandraMessageLabel" layoutX="165.0" layoutY="535.0" prefWidth="525.0" text="Sandra još nije izvršila tjednu evaluaciju." wrapText="true"/>
 
    </children>
 
