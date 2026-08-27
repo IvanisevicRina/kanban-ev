@@ -41,7 +41,7 @@ public class AssemblyDepartment extends Department{
         player.addScore(assemblyPoints);
 
         gameState.addCarInDevelopment(car);
-        String message = player.getName()+" sastavio je automobil"+carModel.getDisplayName()+" i dobio 3 boda";
+        String message = player.getName()+" sastavio je automobil "+carModel.getDisplayName()+" i dobio "+ carModel.getAssemblyPoints()+" boda";
         return new ActionResult(true,message);
     }
 

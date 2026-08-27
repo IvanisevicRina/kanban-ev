@@ -38,8 +38,6 @@ public enum CarModel {
 
     @Override
     public String toString() {
-        return "CarModel{" +
-                "displayName='" + displayName + '\'' +
-                '}';
+        return name();
     }
 }
