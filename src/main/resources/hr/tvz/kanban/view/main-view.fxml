@@ -47,6 +47,8 @@
 
 
        <ComboBox fx:id="carModelComboBox" layoutX="400.0" layoutY="473.0" prefWidth="150.0" promptText="OdaberiModel" />
+      <Button onAction="#handleSaveGame" layoutX="464.0" layoutY="561.0" mnemonicParsing="false" text="Save" />
+      <Button onAction="#handleLoadGame" layoutX="544.0" layoutY="561.0" mnemonicParsing="false" text="Load" />
 
 
 

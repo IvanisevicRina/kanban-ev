@@ -1,6 +1,7 @@
 package hr.tvz.kanban.engine;
 
 import hr.tvz.kanban.model.*;
+import hr.tvz.kanban.serialization.SavedGame;
 
 import java.util.*;
 
@@ -102,5 +103,29 @@ public class KanbanEngine {
     public List<WeekAction> getActionHistory() {
         return List.copyOf(actionHistory);
     }
+
+    public GameState getGameState() {
+        return gameState;
+    }
+
+    public SavedGame createSavedGame() {
+        return new SavedGame(gameState,actionHistory,evaluationHistory,playerWhoActed);
+    }
+
+
+    public static KanbanEngine restore(SavedGame savedGame){
+        Objects.requireNonNull(savedGame);
+        KanbanEngine restoredEngine = new KanbanEngine(savedGame.gameState());
+
+        restoredEngine.actionHistory.addAll(savedGame.actionHistory());
+
+        restoredEngine.evaluationHistory.addAll(savedGame.evaluationHistory());
+
+        restoredEngine.playerWhoActed.addAll(savedGame.playersWhoActed());
+
+        return restoredEngine;
+    }
+
+
 
 }

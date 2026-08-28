@@ -1,12 +1,18 @@
 package hr.tvz.kanban.controller;
 import hr.tvz.kanban.engine.KanbanEngine;
 import hr.tvz.kanban.model.*;
+import hr.tvz.kanban.serialization.SavedGame;
+import hr.tvz.kanban.servica.LocalGameFileService;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 
+import java.nio.file.Path;
+
 public class MainController {
+
+    private final LocalGameFileService fileService = new LocalGameFileService();
 
     @FXML
     private Label weekLabel, playersLabel, currentPlayerLabel, playerStatsLabel,actionResultLabel, sandraMessageLabel, gameResultLabel;
@@ -131,6 +137,7 @@ public class MainController {
     private Player getCurrentPlayer() {
         return gameState.getPlayers().get(currentPlayerIndex);
     }
+
     public void setGameState(GameState gameState) {
         this.gameState = gameState;
         this.kanbanEngine = new KanbanEngine(gameState);
@@ -139,5 +146,42 @@ public class MainController {
         carModelComboBox.setValue(CarModel.CITY);
         actionResultLabel.setText("");
         refreshView();
+    }
+
+    @FXML
+    private void handleSaveGame(){
+        try {
+            Path saveFile = fileService.saveGame((kanbanEngine));
+            actionResultLabel.setText("Igra je spremljena u datoteku: " +saveFile);
+
+        } catch (IllegalStateException exception){
+            actionResultLabel.setText("Spremanje nije uspilo: "+ exception.getMessage()  );
+        }
+    }
+
+    @FXML
+    private void handleLoadGame(){
+        try{
+            SavedGame savedGame = fileService.loadGame();
+            kanbanEngine = KanbanEngine.restore(savedGame);
+            gameState = kanbanEngine.getGameState();
+            currentPlayerIndex = findNextPlayerIndex(savedGame);
+            carModelComboBox.setValue(null);
+            actionResultLabel.setText("Spremljena igra uspješno učitana");
+            refreshView();
+
+        } catch (IllegalStateException exception){
+            actionResultLabel.setText("Učitavanje nije uspjelo: " + exception.getMessage());
+        }
+    }
+
+    private int findNextPlayerIndex(SavedGame savedGame) {
+        for(int i = 0; i<gameState.getPlayers().size();i++){
+            Player player = gameState.getPlayers().get(i);
+            if(!savedGame.playersWhoActed().contains(player.getId())){
+                return  i;
+            }
+        }
+        return 0;
     }
 }
