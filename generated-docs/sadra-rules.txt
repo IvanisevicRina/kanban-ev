@@ -1,0 +1,10 @@
+sandRINA PRAVILA EVALUACIJE
+
+Metoda: calculateWeeklyProgress
+Opis: Izračun tjednog napretka igrača
+Uvijet: Dizajn + komponente + vrijednost auta + testirani automobili * 2
+
+Metoda: evaluatePlayers
+Opis: Usporedba napretka igraca
+Uvijet: Izvodi se na kraju svakog radnog tjedna
+
