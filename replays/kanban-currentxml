@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gameReplay>
+    <action>
+        <playerID>player-1</playerID>
+        <weekNumber>1</weekNumber>
+        <departmentType>DESIGN</departmentType>
+        <description>a dobio je jedan bod za dizajn</description>
+    </action>
+    <action>
+        <playerID>player-2</playerID>
+        <weekNumber>1</weekNumber>
+        <departmentType>LOGISTICS</departmentType>
+        <description>b je uzeo jednu komponentu</description>
+    </action>
+    <action>
+        <playerID>player-1</playerID>
+        <weekNumber>2</weekNumber>
+        <departmentType>DESIGN</departmentType>
+        <description>a dobio je jedan bod za dizajn</description>
+    </action>
+    <action>
+        <playerID>player-2</playerID>
+        <weekNumber>2</weekNumber>
+        <departmentType>LOGISTICS</departmentType>
+        <description>b je uzeo jednu komponentu</description>
+    </action>
+    <action>
+        <playerID>player-1</playerID>
+        <weekNumber>3</weekNumber>
+        <departmentType>DESIGN</departmentType>
+        <description>a dobio je jedan bod za dizajn</description>
+    </action>
+    <action>
+        <playerID>player-2</playerID>
+        <weekNumber>3</weekNumber>
+        <departmentType>LOGISTICS</departmentType>
+        <description>b je uzeo jednu komponentu</description>
+    </action>
+</gameReplay>

@@ -9,6 +9,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 
 import java.nio.file.Path;
+import java.util.List;
 
 public class MainController {
 
@@ -174,6 +175,37 @@ public class MainController {
             actionResultLabel.setText("Učitavanje nije uspjelo: " + exception.getMessage());
         }
     }
+
+
+
+    @FXML
+    private void handleExportReplay(){
+        try{
+            Path replayFile = fileService.exportReplay(kanbanEngine);
+            actionResultLabel.setText("Replay je spremljen u xml: " + replayFile);
+
+        } catch (IllegalStateException e){
+            actionResultLabel.setText("Izvoz replaya neuspješan: " + e.getMessage());
+        }
+    }
+
+    @FXML
+    private void handleLoadReplay(){
+        try{
+            List<WeekAction> actions = fileService.loadReplay();
+            WeekAction lastAction = actions.getLast();
+            actionResultLabel.setText("Reply je učitan. Broj poteza: "+actions.size()+"Zadnji potez-> " + lastAction.description());
+
+        } catch (IllegalStateException e){
+            actionResultLabel.setText("Učitavanje replay nije uspio:" + e.getMessage());
+        }
+    }
+
+
+
+
+
+
 
     private int findNextPlayerIndex(SavedGame savedGame) {
         for(int i = 0; i<gameState.getPlayers().size();i++){
