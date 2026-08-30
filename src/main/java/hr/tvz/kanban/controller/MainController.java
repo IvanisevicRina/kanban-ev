@@ -3,6 +3,7 @@ import hr.tvz.kanban.engine.KanbanEngine;
 import hr.tvz.kanban.model.*;
 import hr.tvz.kanban.serialization.SavedGame;
 import hr.tvz.kanban.servica.LocalGameFileService;
+import hr.tvz.kanban.ui.ReplayWindow;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -177,7 +178,6 @@ public class MainController {
     }
 
 
-
     @FXML
     private void handleExportReplay(){
         try{
@@ -193,19 +193,14 @@ public class MainController {
     private void handleLoadReplay(){
         try{
             List<WeekAction> actions = fileService.loadReplay();
-            WeekAction lastAction = actions.getLast();
-            actionResultLabel.setText("Reply je učitan. Broj poteza: "+actions.size()+"Zadnji potez-> " + lastAction.description());
+            new ReplayWindow().show(actions);
+
+            actionResultLabel.setText("Reply je otovoren. Broj poteza: "+actions.size());
 
         } catch (IllegalStateException e){
-            actionResultLabel.setText("Učitavanje replay nije uspio:" + e.getMessage());
+            actionResultLabel.setText("UPokretanje replay nije uspio:" + e.getMessage());
         }
     }
-
-
-
-
-
-
 
     private int findNextPlayerIndex(SavedGame savedGame) {
         for(int i = 0; i<gameState.getPlayers().size();i++){

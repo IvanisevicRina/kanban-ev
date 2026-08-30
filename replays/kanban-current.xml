@@ -10,24 +10,30 @@
         <playerId>player-2</playerId>
         <weekNumber>1</weekNumber>
         <departmentType>LOGISTICS</departmentType>
-        <description>Francika je uzeo jednu komponentu</description>
+        <description>Frane je uzeo jednu komponentu</description>
     </action>
     <action>
         <playerId>player-1</playerId>
         <weekNumber>2</weekNumber>
-        <departmentType>DESIGN</departmentType>
-        <description>Rina dobio je jedan bod za dizajn</description>
+        <departmentType>LOGISTICS</departmentType>
+        <description>Rina je uzeo jednu komponentu</description>
     </action>
     <action>
         <playerId>player-2</playerId>
         <weekNumber>2</weekNumber>
         <departmentType>LOGISTICS</departmentType>
-        <description>Francika je uzeo jednu komponentu</description>
+        <description>Frane je uzeo jednu komponentu</description>
     </action>
     <action>
         <playerId>player-1</playerId>
         <weekNumber>3</weekNumber>
-        <departmentType>LOGISTICS</departmentType>
-        <description>Rina je uzeo jednu komponentu</description>
+        <departmentType>ASSEMBLY</departmentType>
+        <description>Rina sastavio je automobil City i dobio 3 boda</description>
+    </action>
+    <action>
+        <playerId>player-2</playerId>
+        <weekNumber>3</weekNumber>
+        <departmentType>DESIGN</departmentType>
+        <description>Frane dobio je jedan bod za dizajn</description>
     </action>
 </gameReplay>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.tvz.kanban.controller.ReplayController">
+   <children>
+      <Label layoutX="189.0" layoutY="14.0" prefHeight="51.0" prefWidth="222.0" text="KANBAN EV - replay igre">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="progressLabel" layoutX="88.0" layoutY="296.0" prefHeight="65.0" prefWidth="410.0" text="Label" />
+
+       <Label fx:id="actionLabel" layoutX="143.0" layoutY="88.0" prefHeight="177.0" prefWidth="315.0" text="Klikni Pokreni za početak replaya." />
+
+       <Button layoutX="178.0" layoutY="271.0" onAction="#handleStart" text="Pokreni" />
+
+       <Button layoutX="257.0" layoutY="271.0" onAction="#handlePause" text="Pauziraj" />
+
+       <Button layoutX="351.0" layoutY="271.0" onAction="#handleReset" text="Stop" />
+
+   </children>
+</AnchorPane>
