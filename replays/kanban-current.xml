@@ -4,36 +4,108 @@
         <playerId>player-1</playerId>
         <weekNumber>1</weekNumber>
         <departmentType>DESIGN</departmentType>
-        <description>Rina dobio je jedan bod za dizajn</description>
+        <description>Marinela dobio je jedan bod za dizajn</description>
     </action>
     <action>
         <playerId>player-2</playerId>
         <weekNumber>1</weekNumber>
         <departmentType>LOGISTICS</departmentType>
-        <description>Frane je uzeo jednu komponentu</description>
+        <description>Josipa je uzeo jednu komponentu</description>
+    </action>
+    <action>
+        <playerId>player-3</playerId>
+        <weekNumber>1</weekNumber>
+        <departmentType>DESIGN</departmentType>
+        <description>Krešo dobio je jedan bod za dizajn</description>
+    </action>
+    <action>
+        <playerId>player-4</playerId>
+        <weekNumber>1</weekNumber>
+        <departmentType>DESIGN</departmentType>
+        <description>Tin dobio je jedan bod za dizajn</description>
     </action>
     <action>
         <playerId>player-1</playerId>
         <weekNumber>2</weekNumber>
-        <departmentType>LOGISTICS</departmentType>
-        <description>Rina je uzeo jednu komponentu</description>
+        <departmentType>DESIGN</departmentType>
+        <description>Marinela dobio je jedan bod za dizajn</description>
     </action>
     <action>
         <playerId>player-2</playerId>
         <weekNumber>2</weekNumber>
+        <departmentType>DESIGN</departmentType>
+        <description>Josipa dobio je jedan bod za dizajn</description>
+    </action>
+    <action>
+        <playerId>player-3</playerId>
+        <weekNumber>2</weekNumber>
+        <departmentType>DESIGN</departmentType>
+        <description>Krešo dobio je jedan bod za dizajn</description>
+    </action>
+    <action>
+        <playerId>player-4</playerId>
+        <weekNumber>2</weekNumber>
         <departmentType>LOGISTICS</departmentType>
-        <description>Frane je uzeo jednu komponentu</description>
+        <description>Tin je uzeo jednu komponentu</description>
     </action>
     <action>
         <playerId>player-1</playerId>
         <weekNumber>3</weekNumber>
-        <departmentType>ASSEMBLY</departmentType>
-        <description>Rina sastavio je automobil City i dobio 3 boda</description>
+        <departmentType>DESIGN</departmentType>
+        <description>Marinela dobio je jedan bod za dizajn</description>
     </action>
     <action>
         <playerId>player-2</playerId>
         <weekNumber>3</weekNumber>
         <departmentType>DESIGN</departmentType>
-        <description>Frane dobio je jedan bod za dizajn</description>
+        <description>Josipa dobio je jedan bod za dizajn</description>
+    </action>
+    <action>
+        <playerId>player-3</playerId>
+        <weekNumber>3</weekNumber>
+        <departmentType>LOGISTICS</departmentType>
+        <description>Krešo je uzeo jednu komponentu</description>
+    </action>
+    <action>
+        <playerId>player-4</playerId>
+        <weekNumber>3</weekNumber>
+        <departmentType>LOGISTICS</departmentType>
+        <description>Tin je uzeo jednu komponentu</description>
+    </action>
+    <action>
+        <playerId>player-1</playerId>
+        <weekNumber>4</weekNumber>
+        <departmentType>LOGISTICS</departmentType>
+        <description>Marinela je uzeo jednu komponentu</description>
+    </action>
+    <action>
+        <playerId>player-2</playerId>
+        <weekNumber>4</weekNumber>
+        <departmentType>LOGISTICS</departmentType>
+        <description>Josipa je uzeo jednu komponentu</description>
+    </action>
+    <action>
+        <playerId>player-3</playerId>
+        <weekNumber>4</weekNumber>
+        <departmentType>LOGISTICS</departmentType>
+        <description>Krešo je uzeo jednu komponentu</description>
+    </action>
+    <action>
+        <playerId>player-4</playerId>
+        <weekNumber>4</weekNumber>
+        <departmentType>DESIGN</departmentType>
+        <description>Tin dobio je jedan bod za dizajn</description>
+    </action>
+    <action>
+        <playerId>player-1</playerId>
+        <weekNumber>5</weekNumber>
+        <departmentType>ASSEMBLY</departmentType>
+        <description>Marinela sastavio je automobil City i dobio 3 boda</description>
+    </action>
+    <action>
+        <playerId>player-2</playerId>
+        <weekNumber>5</weekNumber>
+        <departmentType>ASSEMBLY</departmentType>
+        <description>Josipa sastavio je automobil SUV i dobio 5 boda</description>
     </action>
 </gameReplay>

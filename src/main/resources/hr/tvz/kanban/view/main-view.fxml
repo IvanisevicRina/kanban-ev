@@ -11,42 +11,42 @@
 
           <Label layoutX="310.0" layoutY="63.0" text="Kanban EV" textAlignment="CENTER">
              <font>
-                <Font size="38.0" />
+                <Font name="System Bold Italic" size="38.0" />
             </font>
           </Label>
-          <Label fx:id="weekLabel" layoutX="91.0" layoutY="198.0" text="Trenutačni tjedan">
+          <Label fx:id="weekLabel" layoutX="47.0" layoutY="156.0" prefHeight="25.0" prefWidth="247.0" text="Trenutačni tjedan">
               <font>
                   <Font size="16.0" />
               </font></Label>
-          <Label fx:id="playersLabel" layoutX="98.0" layoutY="246.0" text="Igrači">
+          <Label fx:id="playersLabel" layoutX="67.0" layoutY="222.0" prefHeight="26.0" prefWidth="204.0" text="Igrači">
             <font>
                 <Font size="17.0" />
              </font>
           </Label>
-       <Label fx:id="currentPlayerLabel" layoutX="98.0" layoutY="300.0" text="Na potezu">
+       <Label fx:id="currentPlayerLabel" layoutX="122.0" layoutY="299.0" prefHeight="48.0" prefWidth="156.0" text="Na potezu">
            <font>
-               <Font size="20.0" />
+               <Font name="System Bold" size="20.0" />
            </font>
        </Label>
 
        <Label fx:id="playerStatsLabel" layoutX="378.0" layoutY="168.0" prefHeight="96.0" prefWidth="335.0" text="Podaci o igraču" />
 
-       <Button fx:id="designButton" layoutX="165.0" layoutY="430.0" mnemonicParsing="false" onAction="#selectDesign" text="Dizajn" />
+       <Button fx:id="designButton" layoutX="187.0" layoutY="396.0" mnemonicParsing="false" onAction="#selectDesign" text="Dizajn" />
 
-       <Button fx:id="logisticsButton" layoutX="300.0" layoutY="430.0" mnemonicParsing="false" onAction="#selectLogistics" text="Logistika" />
+       <Button fx:id="logisticsButton" layoutX="263.0" layoutY="396.0" mnemonicParsing="false" onAction="#selectLogistics" text="Logistika" />
 
-       <Button fx:id="assemblyButton" layoutX="435.0" layoutY="430.0" mnemonicParsing="false" onAction="#selectAssembly" text="Montaža" />
+       <Button fx:id="assemblyButton" layoutX="354.0" layoutY="396.0" mnemonicParsing="false" onAction="#selectAssembly" text="Montaža" />
 
-       <Button fx:id="testingButton" layoutX="570.0" layoutY="430.0" mnemonicParsing="false" onAction="#selectTesting" text="Testiranje" />
+       <Button fx:id="testingButton" layoutX="612.0" layoutY="396.0" mnemonicParsing="false" onAction="#selectTesting" text="Testiranje" />
 
-       <Label fx:id="actionResultLabel" layoutX="165.0" layoutY="485.0" textFill="#1565c0" wrapText="true" />
+       <Label fx:id="actionResultLabel" layoutX="38.0" layoutY="513.0" prefHeight="33.0" prefWidth="724.0" textFill="#1565c0" wrapText="true" />
 
-       <Label fx:id="sandraMessageLabel" layoutX="165.0" layoutY="535.0" text="Sandra još nije izvršila tjednu evaluaciju." wrapText="true" />
+       <Label fx:id="sandraMessageLabel" layoutX="47.0" layoutY="459.0" prefHeight="55.0" prefWidth="718.0" text="Sandra još nije izvršila tjednu evaluaciju." wrapText="true" />
 
        <Label fx:id="gameResultLabel" layoutX="367.0" layoutY="287.0" prefHeight="73.0" prefWidth="366.0" />
 
 
-       <ComboBox fx:id="carModelComboBox" layoutX="400.0" layoutY="473.0" prefWidth="150.0" promptText="OdaberiModel" />
+       <ComboBox fx:id="carModelComboBox" layoutX="436.0" layoutY="396.0" prefWidth="150.0" promptText="OdaberiModel" />
        <Button layoutX="230.0" layoutY="561.0" mnemonicParsing="false" onAction="#handleSaveGame" text="Save" />
        <Button layoutX="289.0" layoutY="561.0" mnemonicParsing="false" onAction="#handleLoadGame" text="Load" />
        <Button layoutX="376.0" layoutY="561.0" mnemonicParsing="false" onAction="#handleExportReplay" text="Izvezi replay" />

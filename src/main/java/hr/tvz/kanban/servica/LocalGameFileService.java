@@ -4,6 +4,8 @@ import hr.tvz.kanban.engine.KanbanEngine;
 import hr.tvz.kanban.model.WeekAction;
 import hr.tvz.kanban.replay.DomReplayReader;
 import hr.tvz.kanban.replay.DomReplayWriter;
+import hr.tvz.kanban.replay.ReplaySummary;
+import hr.tvz.kanban.replay.SaxReplaySummaryReader;
 import hr.tvz.kanban.serialization.GameSaveService;
 import hr.tvz.kanban.serialization.SavedGame;
 
@@ -23,6 +25,7 @@ public class LocalGameFileService {
 
     private final DomReplayReader replayReader = new DomReplayReader();
 
+    private final SaxReplaySummaryReader summaryReader = new SaxReplaySummaryReader();
 
 
 
@@ -60,6 +63,13 @@ public class LocalGameFileService {
 
 
 
+    }
+
+    public ReplaySummary loadReplaySummary(){
+        if(!Files.exists(REPLAY_FILE)){
+            throw new IllegalStateException("Najrpije zvezi replay u XML");
+        }
+        return summaryReader.read(REPLAY_FILE);
     }
 
 

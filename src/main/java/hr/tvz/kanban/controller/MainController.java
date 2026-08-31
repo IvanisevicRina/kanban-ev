@@ -1,6 +1,7 @@
 package hr.tvz.kanban.controller;
 import hr.tvz.kanban.engine.KanbanEngine;
 import hr.tvz.kanban.model.*;
+import hr.tvz.kanban.replay.ReplaySummary;
 import hr.tvz.kanban.serialization.SavedGame;
 import hr.tvz.kanban.servica.LocalGameFileService;
 import hr.tvz.kanban.ui.ReplayWindow;
@@ -193,12 +194,14 @@ public class MainController {
     private void handleLoadReplay(){
         try{
             List<WeekAction> actions = fileService.loadReplay();
+            ReplaySummary summary = fileService.loadReplaySummary();
+
             new ReplayWindow().show(actions);
 
-            actionResultLabel.setText("Reply je otovoren. Broj poteza: "+actions.size());
+            actionResultLabel.setText("Replay je otvoren. Poteza: " + summary.actionCount()+ ", igrača: " + summary.playerCount() + ", zadnji tjedan: " + summary.lastWeekNumber());
 
         } catch (IllegalStateException e){
-            actionResultLabel.setText("UPokretanje replay nije uspio:" + e.getMessage());
+            actionResultLabel.setText("Pokretanje replay nije uspio:" + e.getMessage());
         }
     }
 
