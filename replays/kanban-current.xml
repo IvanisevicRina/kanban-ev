@@ -4,114 +4,102 @@
         <playerId>player-1</playerId>
         <weekNumber>1</weekNumber>
         <departmentType>DESIGN</departmentType>
-        <description>Pero dobio je jedan bod za dizajn</description>
+        <description>Rina dobio je jedan bod za dizajn</description>
     </action>
     <action>
         <playerId>player-2</playerId>
         <weekNumber>1</weekNumber>
         <departmentType>LOGISTICS</departmentType>
-        <description>Maro je uzeo jednu komponentu</description>
+        <description>Frane je uzeo jednu komponentu</description>
     </action>
     <action>
         <playerId>player-3</playerId>
         <weekNumber>1</weekNumber>
         <departmentType>DESIGN</departmentType>
-        <description>Karlo dobio je jedan bod za dizajn</description>
+        <description>Elija dobio je jedan bod za dizajn</description>
     </action>
     <action>
         <playerId>player-4</playerId>
         <weekNumber>1</weekNumber>
         <departmentType>LOGISTICS</departmentType>
-        <description>Pio je uzeo jednu komponentu</description>
+        <description>Tvrtko je uzeo jednu komponentu</description>
     </action>
     <action>
         <playerId>player-1</playerId>
         <weekNumber>2</weekNumber>
         <departmentType>DESIGN</departmentType>
-        <description>Pero dobio je jedan bod za dizajn</description>
+        <description>Rina dobio je jedan bod za dizajn</description>
     </action>
     <action>
         <playerId>player-2</playerId>
         <weekNumber>2</weekNumber>
         <departmentType>DESIGN</departmentType>
-        <description>Maro dobio je jedan bod za dizajn</description>
+        <description>Frane dobio je jedan bod za dizajn</description>
     </action>
     <action>
         <playerId>player-3</playerId>
         <weekNumber>2</weekNumber>
-        <departmentType>DESIGN</departmentType>
-        <description>Karlo dobio je jedan bod za dizajn</description>
+        <departmentType>LOGISTICS</departmentType>
+        <description>Elija je uzeo jednu komponentu</description>
     </action>
     <action>
         <playerId>player-4</playerId>
         <weekNumber>2</weekNumber>
-        <departmentType>LOGISTICS</departmentType>
-        <description>Pio je uzeo jednu komponentu</description>
+        <departmentType>DESIGN</departmentType>
+        <description>Tvrtko dobio je jedan bod za dizajn</description>
     </action>
     <action>
         <playerId>player-1</playerId>
         <weekNumber>3</weekNumber>
         <departmentType>LOGISTICS</departmentType>
-        <description>Pero je uzeo jednu komponentu</description>
+        <description>Rina je uzeo jednu komponentu</description>
     </action>
     <action>
         <playerId>player-2</playerId>
         <weekNumber>3</weekNumber>
         <departmentType>DESIGN</departmentType>
-        <description>Maro dobio je jedan bod za dizajn</description>
+        <description>Frane dobio je jedan bod za dizajn</description>
     </action>
     <action>
         <playerId>player-3</playerId>
         <weekNumber>3</weekNumber>
         <departmentType>LOGISTICS</departmentType>
-        <description>Karlo je uzeo jednu komponentu</description>
+        <description>Elija je uzeo jednu komponentu</description>
     </action>
     <action>
         <playerId>player-4</playerId>
         <weekNumber>3</weekNumber>
         <departmentType>DESIGN</departmentType>
-        <description>Pio dobio je jedan bod za dizajn</description>
+        <description>Tvrtko dobio je jedan bod za dizajn</description>
     </action>
     <action>
         <playerId>player-1</playerId>
         <weekNumber>4</weekNumber>
         <departmentType>LOGISTICS</departmentType>
-        <description>Pero je uzeo jednu komponentu</description>
+        <description>Rina je uzeo jednu komponentu</description>
     </action>
     <action>
         <playerId>player-2</playerId>
         <weekNumber>4</weekNumber>
+        <departmentType>LOGISTICS</departmentType>
+        <description>Frane je uzeo jednu komponentu</description>
+    </action>
+    <action>
+        <playerId>player-3</playerId>
+        <weekNumber>4</weekNumber>
+        <departmentType>LOGISTICS</departmentType>
+        <description>Elija je uzeo jednu komponentu</description>
+    </action>
+    <action>
+        <playerId>player-4</playerId>
+        <weekNumber>4</weekNumber>
+        <departmentType>LOGISTICS</departmentType>
+        <description>Tvrtko je uzeo jednu komponentu</description>
+    </action>
+    <action>
+        <playerId>player-1</playerId>
+        <weekNumber>5</weekNumber>
         <departmentType>ASSEMBLY</departmentType>
-        <description>Maro sastavio je automobil City i dobio 3 boda</description>
-    </action>
-    <action>
-        <playerId>player-3</playerId>
-        <weekNumber>4</weekNumber>
-        <departmentType>LOGISTICS</departmentType>
-        <description>Karlo je uzeo jednu komponentu</description>
-    </action>
-    <action>
-        <playerId>player-4</playerId>
-        <weekNumber>4</weekNumber>
-        <departmentType>DESIGN</departmentType>
-        <description>Pio dobio je jedan bod za dizajn</description>
-    </action>
-    <action>
-        <playerId>player-1</playerId>
-        <weekNumber>5</weekNumber>
-        <departmentType>LOGISTICS</departmentType>
-        <description>Pero je uzeo jednu komponentu</description>
-    </action>
-    <action>
-        <playerId>player-2</playerId>
-        <weekNumber>5</weekNumber>
-        <departmentType>DESIGN</departmentType>
-        <description>Maro dobio je jedan bod za dizajn</description>
-    </action>
-    <action>
-        <playerId>player-3</playerId>
-        <weekNumber>5</weekNumber>
-        <departmentType>LOGISTICS</departmentType>
-        <description>Karlo je uzeo jednu komponentu</description>
+        <description>Rina sastavio je automobil City i dobio 3 boda</description>
     </action>
 </gameReplay>

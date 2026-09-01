@@ -4,6 +4,7 @@ import hr.tvz.kanban.model.*;
 import hr.tvz.kanban.replay.ReplaySummary;
 import hr.tvz.kanban.serialization.SavedGame;
 import hr.tvz.kanban.service.LocalGameFileService;
+import hr.tvz.kanban.thread.ReplayLoadThread;
 import hr.tvz.kanban.ui.ReplayWindow;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -151,7 +152,6 @@ public class MainController {
         actionResultLabel.setText("");
         refreshView();
     }
-
     @FXML
     private void handleSaveGame(){
         try {
@@ -166,38 +166,11 @@ public class MainController {
     @FXML
     private void handleLoadGame(){
         actionResultLabel.setText("Učitavanje replaya...");
-
-        Runnable replayTask = new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    List<WeekAction> actions = fileService.loadReplay();
-                    ReplaySummary summary = fileService.loadReplaySummary();
-                    Runnable showReplayTask = new Runnable() {
-                        @Override
-                        public void run() {
-                            new ReplayWindow().show(actions);
-                            actionResultLabel.setText("Replay je otvoren. Poteza: " + summary.actionCount() + ", igrača: " + summary.playerCount() + ", zadnnji tjedan: " + summary.lastWeekNumber());
-                        }
-                    };
-                    Platform.runLater(showReplayTask);
-                } catch(IllegalStateException exception){
-                    Runnable showErrorTask = new Runnable() {
-                        @Override
-                        public void run() {
-                            actionResultLabel.setText("Pokretanje replaya nije uspilo :" + exception.getMessage());
-                        }
-                    };
-                    Platform.runLater(showErrorTask);
-                }
-            }
-        };
+        Runnable replayTask = new ReplayLoadThread(fileService,actionResultLabel);
         Thread replayThread = new Thread(replayTask, "replay-loader");
         replayThread.setDaemon(true);
         replayThread.start();
-
     }
-
 
     @FXML
     private void handleExportReplay(){
@@ -209,7 +182,6 @@ public class MainController {
             actionResultLabel.setText("Izvoz replaya neuspješan: " + e.getMessage());
         }
     }
-
     @FXML
     private void handleLoadReplay(){
         try{
@@ -223,15 +195,5 @@ public class MainController {
         } catch (IllegalStateException e){
             actionResultLabel.setText("Pokretanje replay nije uspio:" + e.getMessage());
         }
-    }
-
-    private int findNextPlayerIndex(SavedGame savedGame) {
-        for(int i = 0; i<gameState.getPlayers().size();i++){
-            Player player = gameState.getPlayers().get(i);
-            if(!savedGame.playersWhoActed().contains(player.getId())){
-                return  i;
-            }
-        }
-        return 0;
     }
 }
