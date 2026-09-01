@@ -33,7 +33,7 @@ public final class GameSaveService {
 
 
         } catch (IOException e) {
-            throw new IllegalArgumentException("Nije moguće spremit igru", e);
+            throw new IllegalStateException("Nije moguće spremit igru", e);
         }
     }
 

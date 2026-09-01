@@ -3,8 +3,9 @@ import hr.tvz.kanban.engine.KanbanEngine;
 import hr.tvz.kanban.model.*;
 import hr.tvz.kanban.replay.ReplaySummary;
 import hr.tvz.kanban.serialization.SavedGame;
-import hr.tvz.kanban.servica.LocalGameFileService;
+import hr.tvz.kanban.service.LocalGameFileService;
 import hr.tvz.kanban.ui.ReplayWindow;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -164,18 +165,37 @@ public class MainController {
 
     @FXML
     private void handleLoadGame(){
-        try{
-            SavedGame savedGame = fileService.loadGame();
-            kanbanEngine = KanbanEngine.restore(savedGame);
-            gameState = kanbanEngine.getGameState();
-            currentPlayerIndex = findNextPlayerIndex(savedGame);
-            carModelComboBox.setValue(null);
-            actionResultLabel.setText("Spremljena igra uspješno učitana");
-            refreshView();
+        actionResultLabel.setText("Učitavanje replaya...");
 
-        } catch (IllegalStateException exception){
-            actionResultLabel.setText("Učitavanje nije uspjelo: " + exception.getMessage());
-        }
+        Runnable replayTask = new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    List<WeekAction> actions = fileService.loadReplay();
+                    ReplaySummary summary = fileService.loadReplaySummary();
+                    Runnable showReplayTask = new Runnable() {
+                        @Override
+                        public void run() {
+                            new ReplayWindow().show(actions);
+                            actionResultLabel.setText("Replay je otvoren. Poteza: " + summary.actionCount() + ", igrača: " + summary.playerCount() + ", zadnnji tjedan: " + summary.lastWeekNumber());
+                        }
+                    };
+                    Platform.runLater(showReplayTask);
+                } catch(IllegalStateException exception){
+                    Runnable showErrorTask = new Runnable() {
+                        @Override
+                        public void run() {
+                            actionResultLabel.setText("Pokretanje replaya nije uspilo :" + exception.getMessage());
+                        }
+                    };
+                    Platform.runLater(showErrorTask);
+                }
+            }
+        };
+        Thread replayThread = new Thread(replayTask, "replay-loader");
+        replayThread.setDaemon(true);
+        replayThread.start();
+
     }
 
 

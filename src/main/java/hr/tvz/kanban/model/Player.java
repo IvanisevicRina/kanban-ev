@@ -48,7 +48,7 @@ public class Player implements Serializable {
     }
 
     public boolean useComponents(int amount){
-        if (amount <0 || components <amount){
+        if (amount <=0 || components <amount){
             return false;
         }
         components = components-amount;
@@ -121,5 +121,8 @@ public class Player implements Serializable {
             throw new IllegalArgumentException("Broj bodova mora bit veći od nula");
         }
         score = score - points;
+        if (score <0){
+            score=0;
+        }
     }
 }

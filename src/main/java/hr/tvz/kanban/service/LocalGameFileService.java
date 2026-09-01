@@ -1,4 +1,4 @@
-package hr.tvz.kanban.servica;
+package hr.tvz.kanban.service;
 
 import hr.tvz.kanban.engine.KanbanEngine;
 import hr.tvz.kanban.model.WeekAction;

@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.tvz.kanban.controller.ReplayController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.tvz.kanban.controller.ReplayController">
    <children>
       <Label layoutX="189.0" layoutY="14.0" prefHeight="51.0" prefWidth="222.0" text="KANBAN EV - replay igre">
          <font>
@@ -20,7 +20,7 @@
 
        <Button layoutX="257.0" layoutY="271.0" onAction="#handlePause" text="Pauziraj" />
 
-       <Button layoutX="351.0" layoutY="271.0" onAction="#handleReset" text="Stop" />
+       <Button layoutX="351.0" layoutY="271.0" onAction="#handleReset" text="Ponovno" />
 
    </children>
 </AnchorPane>
