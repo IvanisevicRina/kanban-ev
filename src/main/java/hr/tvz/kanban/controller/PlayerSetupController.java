@@ -52,7 +52,7 @@ public class PlayerSetupController {
             stage.show();
         }catch (IOException exception) {
             validationLabel.setText(
-                    "Glavni ekran igre nije moguće otvoriti."
+                    "Glavni ekran igre nije moguće otvoriti." + exception.getMessage()
             );
         }
     }

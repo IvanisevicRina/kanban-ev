@@ -54,10 +54,10 @@ public class SandraDocumentationGenerator {
 
     private void appendRule(List<String> lines, Method method) {
 
-        EvaluationRule rule = method.getAnnotation(EvaluationRule.class);
-        if(rule == null){
+        if(!method.isAnnotationPresent(EvaluationRule.class)){
             return;
         }
+        EvaluationRule rule = method.getAnnotation(EvaluationRule.class);
         lines.add("Metoda: "+ method.getName());
         lines.add("Opis: "+ rule.description());
         lines.add("Uvijet: "+ rule.condition());

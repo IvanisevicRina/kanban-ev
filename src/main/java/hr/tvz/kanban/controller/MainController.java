@@ -2,11 +2,9 @@ package hr.tvz.kanban.controller;
 import hr.tvz.kanban.engine.KanbanEngine;
 import hr.tvz.kanban.model.*;
 import hr.tvz.kanban.replay.ReplaySummary;
-import hr.tvz.kanban.serialization.SavedGame;
 import hr.tvz.kanban.service.LocalGameFileService;
 import hr.tvz.kanban.thread.ReplayLoadThread;
 import hr.tvz.kanban.ui.ReplayWindow;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -53,7 +51,7 @@ public class MainController {
 
         String sandraMessage = gameState.getLastSandraMessage();
 
-        if (sandraMessage==null || sandraMessage.isBlank()){
+        if (sandraMessage.isBlank()){
             sandraMessageLabel.setText("Sandra još nije izvršila tjednu evaluaciju");
         } else {
             sandraMessageLabel.setText("Sandra: "+sandraMessage);
@@ -110,7 +108,7 @@ public class MainController {
     private void selectAssembly() {
         CarModel selectedCar = carModelComboBox.getValue();
 
-        if(selectedCar==null){
+        if(carModelComboBox.getSelectionModel().isEmpty()){
             actionResultLabel.setText("Prije montaže odaberi model auta");
             return;
         }
@@ -137,7 +135,7 @@ public class MainController {
         if(currentPlayerIndex >=gameState.getPlayers().size()){
             currentPlayerIndex=0;
         }
-        carModelComboBox.setValue(null);
+        carModelComboBox.getSelectionModel().clearSelection();
     }
     private Player getCurrentPlayer() {
         return gameState.getPlayers().get(currentPlayerIndex);

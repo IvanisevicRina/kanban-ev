@@ -4,14 +4,15 @@ import hr.tvz.kanban.model.WeekAction;
 import hr.tvz.kanban.replay.ReplaySummary;
 import hr.tvz.kanban.service.LocalGameFileService;
 import hr.tvz.kanban.ui.ReplayWindow;
+import javafx.application.Platform;
 import javafx.scene.control.Label;
 
 import java.util.List;
 
 public class ReplayLoadThread implements Runnable{
 
-    private LocalGameFileService fileService;
-    private Label actionResultLabel;
+    private final LocalGameFileService fileService;
+    private final Label actionResultLabel;
 
 
     public ReplayLoadThread(LocalGameFileService fileService, Label actionResultLabel) {
@@ -24,21 +25,9 @@ public class ReplayLoadThread implements Runnable{
         try{
             List<WeekAction> actions = fileService.loadReplay();
             ReplaySummary summary = fileService.loadReplaySummary();
-            Runnable showReplayTask = new Runnable(){
-
-                @Override
-                public void run() {
-                    showReplay(actions,summary);
-
-                }
-            };
+            Platform.runLater(()-> showReplay(actions,summary));
         } catch (IllegalStateException e) {
-            Runnable showErrorTask = new Runnable() {
-                @Override
-                public void run() {
-                    showError(e);
-                }
-            };
+            Platform.runLater(()->showError(e));
         }
 
     }

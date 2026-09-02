@@ -1,9 +1,6 @@
 package hr.tvz.kanban.replay;
-
-import com.sun.javafx.binding.StringFormatter;
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
-
 import javax.xml.XMLConstants;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -59,7 +56,9 @@ public class SaxReplaySummaryReader {
                     case "playerId" -> playerIds.add(value);
                     case "weekNumber"-> updateLastWeek(value);
                     case "action" -> actionCount++;
-                    default -> {}
+                    default -> {
+                        //ostali XL elementi nisu potrebni za sažetak replaya
+                    }
                 }
         }
 

@@ -10,6 +10,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
@@ -51,7 +52,7 @@ public class DomReplayWriter {
 
 
         } catch (Exception e) {
-            throw new IllegalStateException("Nije moguće spremit replay u xml");
+            throw new IllegalStateException("Nije moguće spremit replay u xml", e);
         }
 
 
@@ -91,7 +92,7 @@ public class DomReplayWriter {
         return REPLAY_DIRECTORY.resolve(safeFileName);
     }
 
-    private void writeDocument(Document document, Path replayFile) throws Exception{
+    private void writeDocument(Document document, Path replayFile) throws TransformerException {
 
         TransformerFactory factory = TransformerFactory.newInstance();
         factory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);

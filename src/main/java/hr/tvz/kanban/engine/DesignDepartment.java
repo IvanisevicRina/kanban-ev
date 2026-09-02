@@ -5,6 +5,7 @@ import hr.tvz.kanban.model.DepartmentType;
 import hr.tvz.kanban.model.GameState;
 import hr.tvz.kanban.model.Player;
 
+
 public class DesignDepartment extends Department{
     protected DesignDepartment() {
         super("Dizajn", DepartmentType.DESIGN);

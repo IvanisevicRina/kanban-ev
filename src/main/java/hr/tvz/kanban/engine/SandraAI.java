@@ -64,7 +64,6 @@ public class SandraAI {
     @EvaluationRule(description = "Izračun tjednog napretka igrača", condition = "Dizajn + komponente + vrijednost auta + testirani automobili * 2")
 
     private int calculateWeeklyProgress(Player player, List<WeekAction> weeklyActions) {
-        {
             return weeklyActions
                     .stream()
                     .filter(action ->
@@ -74,9 +73,6 @@ public class SandraAI {
                     )
                     .mapToInt(WeekAction::performancePoints)
                     .sum();
-        }
     }
-
-
 
 }

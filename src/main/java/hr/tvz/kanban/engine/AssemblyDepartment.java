@@ -2,6 +2,7 @@ package hr.tvz.kanban.engine;
 
 import hr.tvz.kanban.model.*;
 
+
 public class AssemblyDepartment extends Department{
 
     protected AssemblyDepartment() {

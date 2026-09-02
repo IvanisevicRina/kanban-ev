@@ -39,7 +39,7 @@ public class DomReplayReader {
             }
             return List.copyOf(actions);
         } catch (Exception e){
-            throw new IllegalStateException("Ne mogu učitat replay pomoću DOM-a");
+            throw new IllegalStateException("Ne mogu učitat replay pomoću DOM-a",e);
         }
     }
 

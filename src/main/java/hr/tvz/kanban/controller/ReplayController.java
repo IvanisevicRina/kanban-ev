@@ -22,7 +22,7 @@ public class ReplayController {
 
     private List<WeekAction> replayActions = List.of();
 
-    private Timeline timeline;
+    private Timeline timeline = new Timeline();
 
     private int currentActionIndex;
 
@@ -42,9 +42,7 @@ public class ReplayController {
 
     private void createTimeLine() {
 
-        if(timeline!=null){
-            timeline.stop();
-        }
+        timeline.stop();
         timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> showNextAction()));
         timeline.setCycleCount(Animation.INDEFINITE);
 
@@ -53,16 +51,13 @@ public class ReplayController {
 
     @FXML
     private void handleStart(){
-        if(timeline!=null){
-            timeline.play();
-        }
+        timeline.play();
+
     }
 
     @FXML
     private void handlePause(){
-        if(timeline!=null){
-            timeline.pause();
-        }
+        timeline.pause();
     }
 
     @FXML
@@ -71,9 +66,7 @@ public class ReplayController {
     }
 
     public void stopReplay(){
-        if(timeline!=null){
-            timeline.stop();
-        }
+        timeline.stop();
     }
 
     private void showNextAction() {

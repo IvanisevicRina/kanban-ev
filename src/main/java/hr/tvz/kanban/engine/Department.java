@@ -5,6 +5,7 @@ import hr.tvz.kanban.model.DepartmentType;
 import hr.tvz.kanban.model.GameState;
 import hr.tvz.kanban.model.Player;
 
+
 public abstract class Department {
     private final String name;
     private final DepartmentType type;

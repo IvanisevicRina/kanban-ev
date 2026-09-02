@@ -35,9 +35,9 @@ public class KanbanEngine {
         if(gameState.isGameFinished()){
             return new ActionResult(false, "Igra je već završena");
         }
-        Player player = findPlayer(playerID);
+        Optional<Player> foundPlayer = findPlayer(playerID);
 
-        if (player == null){
+        if (foundPlayer.isEmpty()){
             return new ActionResult(false, "Igrač nije pronađen");
         }
 
@@ -45,6 +45,7 @@ public class KanbanEngine {
             return new ActionResult(false, "Igrač je već završio potez u ovom tjednu");
         }
 
+        Player player = foundPlayer.get();
         Department department = departments.get(departmentType);
         ActionResult result = department.performAction(player, gameState);
 
@@ -92,8 +93,8 @@ public class KanbanEngine {
         };
     }
 
-    private Player findPlayer(String playerID) {
-        return gameState.getPlayers().stream().filter(player -> player.getId().equals(playerID)).findFirst().orElse(null);
+    private Optional<Player> findPlayer(String playerID) {
+        return gameState.getPlayers().stream().filter(player -> player.getId().equals(playerID)).findFirst();
     }
 
     public List<SandraEvaluation> getEvaluationHistory() {

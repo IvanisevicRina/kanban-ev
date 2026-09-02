@@ -16,13 +16,13 @@
         <playerId>player-3</playerId>
         <weekNumber>1</weekNumber>
         <departmentType>DESIGN</departmentType>
-        <description>Elija dobio je jedan bod za dizajn</description>
+        <description>Katica dobio je jedan bod za dizajn</description>
     </action>
     <action>
         <playerId>player-4</playerId>
         <weekNumber>1</weekNumber>
         <departmentType>LOGISTICS</departmentType>
-        <description>Tvrtko je uzeo jednu komponentu</description>
+        <description>Ljerka je uzeo jednu komponentu</description>
     </action>
     <action>
         <playerId>player-1</playerId>
@@ -33,73 +33,91 @@
     <action>
         <playerId>player-2</playerId>
         <weekNumber>2</weekNumber>
-        <departmentType>DESIGN</departmentType>
-        <description>Frane dobio je jedan bod za dizajn</description>
-    </action>
-    <action>
-        <playerId>player-3</playerId>
-        <weekNumber>2</weekNumber>
-        <departmentType>LOGISTICS</departmentType>
-        <description>Elija je uzeo jednu komponentu</description>
-    </action>
-    <action>
-        <playerId>player-4</playerId>
-        <weekNumber>2</weekNumber>
-        <departmentType>DESIGN</departmentType>
-        <description>Tvrtko dobio je jedan bod za dizajn</description>
-    </action>
-    <action>
-        <playerId>player-1</playerId>
-        <weekNumber>3</weekNumber>
-        <departmentType>LOGISTICS</departmentType>
-        <description>Rina je uzeo jednu komponentu</description>
-    </action>
-    <action>
-        <playerId>player-2</playerId>
-        <weekNumber>3</weekNumber>
-        <departmentType>DESIGN</departmentType>
-        <description>Frane dobio je jedan bod za dizajn</description>
-    </action>
-    <action>
-        <playerId>player-3</playerId>
-        <weekNumber>3</weekNumber>
-        <departmentType>LOGISTICS</departmentType>
-        <description>Elija je uzeo jednu komponentu</description>
-    </action>
-    <action>
-        <playerId>player-4</playerId>
-        <weekNumber>3</weekNumber>
-        <departmentType>DESIGN</departmentType>
-        <description>Tvrtko dobio je jedan bod za dizajn</description>
-    </action>
-    <action>
-        <playerId>player-1</playerId>
-        <weekNumber>4</weekNumber>
-        <departmentType>LOGISTICS</departmentType>
-        <description>Rina je uzeo jednu komponentu</description>
-    </action>
-    <action>
-        <playerId>player-2</playerId>
-        <weekNumber>4</weekNumber>
         <departmentType>LOGISTICS</departmentType>
         <description>Frane je uzeo jednu komponentu</description>
     </action>
     <action>
         <playerId>player-3</playerId>
+        <weekNumber>2</weekNumber>
+        <departmentType>DESIGN</departmentType>
+        <description>Katica dobio je jedan bod za dizajn</description>
+    </action>
+    <action>
+        <playerId>player-4</playerId>
+        <weekNumber>2</weekNumber>
+        <departmentType>LOGISTICS</departmentType>
+        <description>Ljerka je uzeo jednu komponentu</description>
+    </action>
+    <action>
+        <playerId>player-1</playerId>
+        <weekNumber>3</weekNumber>
+        <departmentType>LOGISTICS</departmentType>
+        <description>Rina je uzeo jednu komponentu</description>
+    </action>
+    <action>
+        <playerId>player-2</playerId>
+        <weekNumber>3</weekNumber>
+        <departmentType>DESIGN</departmentType>
+        <description>Frane dobio je jedan bod za dizajn</description>
+    </action>
+    <action>
+        <playerId>player-3</playerId>
+        <weekNumber>3</weekNumber>
+        <departmentType>LOGISTICS</departmentType>
+        <description>Katica je uzeo jednu komponentu</description>
+    </action>
+    <action>
+        <playerId>player-4</playerId>
+        <weekNumber>3</weekNumber>
+        <departmentType>DESIGN</departmentType>
+        <description>Ljerka dobio je jedan bod za dizajn</description>
+    </action>
+    <action>
+        <playerId>player-1</playerId>
         <weekNumber>4</weekNumber>
         <departmentType>LOGISTICS</departmentType>
-        <description>Elija je uzeo jednu komponentu</description>
+        <description>Rina je uzeo jednu komponentu</description>
+    </action>
+    <action>
+        <playerId>player-2</playerId>
+        <weekNumber>4</weekNumber>
+        <departmentType>DESIGN</departmentType>
+        <description>Frane dobio je jedan bod za dizajn</description>
+    </action>
+    <action>
+        <playerId>player-3</playerId>
+        <weekNumber>4</weekNumber>
+        <departmentType>LOGISTICS</departmentType>
+        <description>Katica je uzeo jednu komponentu</description>
     </action>
     <action>
         <playerId>player-4</playerId>
         <weekNumber>4</weekNumber>
-        <departmentType>LOGISTICS</departmentType>
-        <description>Tvrtko je uzeo jednu komponentu</description>
+        <departmentType>DESIGN</departmentType>
+        <description>Ljerka dobio je jedan bod za dizajn</description>
     </action>
     <action>
         <playerId>player-1</playerId>
         <weekNumber>5</weekNumber>
         <departmentType>ASSEMBLY</departmentType>
         <description>Rina sastavio je automobil City i dobio 3 boda</description>
+    </action>
+    <action>
+        <playerId>player-2</playerId>
+        <weekNumber>5</weekNumber>
+        <departmentType>ASSEMBLY</departmentType>
+        <description>Frane sastavio je automobil SUV i dobio 5 boda</description>
+    </action>
+    <action>
+        <playerId>player-3</playerId>
+        <weekNumber>5</weekNumber>
+        <departmentType>LOGISTICS</departmentType>
+        <description>Katica je uzeo jednu komponentu</description>
+    </action>
+    <action>
+        <playerId>player-4</playerId>
+        <weekNumber>5</weekNumber>
+        <departmentType>DESIGN</departmentType>
+        <description>Ljerka dobio je jedan bod za dizajn</description>
     </action>
 </gameReplay>
