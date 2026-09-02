@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/25.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.tvz.kanban.controller.MainController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.tvz.kanban.controller.MainController">
    <children>
 
           <Label layoutX="310.0" layoutY="63.0" text="Kanban EV" textAlignment="CENTER">
@@ -18,18 +18,18 @@
               <font>
                   <Font size="16.0" />
               </font></Label>
-          <Label fx:id="playersLabel" layoutX="67.0" layoutY="222.0" prefHeight="26.0" prefWidth="204.0" text="Igrači">
+          <Label fx:id="playersLabel" layoutX="38.0" layoutY="225.0" prefHeight="48.0" prefWidth="295.0" text="Igrači">
             <font>
                 <Font size="17.0" />
              </font>
           </Label>
-       <Label fx:id="currentPlayerLabel" layoutX="122.0" layoutY="299.0" prefHeight="48.0" prefWidth="156.0" text="Na potezu">
+       <Label fx:id="currentPlayerLabel" layoutX="123.0" layoutY="300.0" prefHeight="48.0" prefWidth="156.0" text="Na potezu">
            <font>
                <Font name="System Bold" size="20.0" />
            </font>
        </Label>
 
-       <Label fx:id="playerStatsLabel" layoutX="378.0" layoutY="168.0" prefHeight="96.0" prefWidth="335.0" text="Podaci o igraču" />
+       <Label fx:id="playerStatsLabel" layoutX="378.0" layoutY="168.0" prefHeight="96.0" prefWidth="410.0" text="Podaci o igraču" />
 
        <Button fx:id="designButton" layoutX="187.0" layoutY="396.0" mnemonicParsing="false" onAction="#selectDesign" text="Dizajn" />
 
@@ -43,7 +43,7 @@
 
        <Label fx:id="sandraMessageLabel" layoutX="47.0" layoutY="459.0" prefHeight="55.0" prefWidth="718.0" text="Sandra još nije izvršila tjednu evaluaciju." wrapText="true" />
 
-       <Label fx:id="gameResultLabel" layoutX="367.0" layoutY="287.0" prefHeight="73.0" prefWidth="366.0" />
+       <Label fx:id="gameResultLabel" layoutX="367.0" layoutY="287.0" prefHeight="73.0" prefWidth="422.0" />
 
 
        <ComboBox fx:id="carModelComboBox" layoutX="436.0" layoutY="396.0" prefWidth="150.0" promptText="OdaberiModel" />
@@ -51,6 +51,11 @@
        <Button layoutX="289.0" layoutY="561.0" mnemonicParsing="false" onAction="#handleLoadGame" text="Load" />
        <Button layoutX="376.0" layoutY="561.0" mnemonicParsing="false" onAction="#handleExportReplay" text="Izvezi replay" />
        <Button layoutX="482.0" layoutY="561.0" mnemonicParsing="false" onAction="#handleLoadReplay" text="Učitaj replay" />
+      <Label layoutX="47.0" layoutY="315.0" text="Na potezu:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
 
 
    </children>

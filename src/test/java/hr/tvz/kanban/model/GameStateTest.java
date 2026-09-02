@@ -6,10 +6,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GameStateTest {
     @Test
-    void gameShouldFinishAfterFifthWeek(){
+    void gameShouldFinishAfterSixtgWeek(){
         GameState gameState = new GameState();
 
-        for (int index=0;index<4;index++){
+        for (int index=0;index<5;index++){
             gameState.nextWeek();
         }
         assertEquals(GameState.MAX_WEEKS, gameState.getCurrentWeek());

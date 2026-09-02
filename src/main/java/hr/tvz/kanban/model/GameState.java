@@ -7,7 +7,7 @@ import java.util.Objects;
 
 public class GameState implements Serializable {
     private static final long serialVersionUID=1L;
-    public static final int MAX_WEEKS=5;
+    public static final int MAX_WEEKS=6;
     private final List<Player> players;
     private final List<Car> carsInDevelopment;
     private int currentWeek;

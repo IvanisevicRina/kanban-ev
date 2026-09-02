@@ -4,120 +4,144 @@
         <playerId>player-1</playerId>
         <weekNumber>1</weekNumber>
         <departmentType>DESIGN</departmentType>
-        <description>Rina dobio je jedan bod za dizajn</description>
+        <description>Mario je dobio dizajnersko znanje</description>
     </action>
     <action>
         <playerId>player-2</playerId>
         <weekNumber>1</weekNumber>
-        <departmentType>LOGISTICS</departmentType>
-        <description>Frane je uzeo jednu komponentu</description>
+        <departmentType>DESIGN</departmentType>
+        <description>Edita je dobio dizajnersko znanje</description>
     </action>
     <action>
         <playerId>player-3</playerId>
         <weekNumber>1</weekNumber>
         <departmentType>DESIGN</departmentType>
-        <description>Katica dobio je jedan bod za dizajn</description>
+        <description>Špirko je dobio dizajnersko znanje</description>
     </action>
     <action>
         <playerId>player-4</playerId>
         <weekNumber>1</weekNumber>
-        <departmentType>LOGISTICS</departmentType>
-        <description>Ljerka je uzeo jednu komponentu</description>
+        <departmentType>DESIGN</departmentType>
+        <description>Mate je dobio dizajnersko znanje</description>
     </action>
     <action>
         <playerId>player-1</playerId>
         <weekNumber>2</weekNumber>
-        <departmentType>DESIGN</departmentType>
-        <description>Rina dobio je jedan bod za dizajn</description>
+        <departmentType>LOGISTICS</departmentType>
+        <description>Mario je uzeo jednu komponentu</description>
     </action>
     <action>
         <playerId>player-2</playerId>
         <weekNumber>2</weekNumber>
         <departmentType>LOGISTICS</departmentType>
-        <description>Frane je uzeo jednu komponentu</description>
+        <description>Edita je uzeo jednu komponentu</description>
     </action>
     <action>
         <playerId>player-3</playerId>
         <weekNumber>2</weekNumber>
-        <departmentType>DESIGN</departmentType>
-        <description>Katica dobio je jedan bod za dizajn</description>
+        <departmentType>LOGISTICS</departmentType>
+        <description>Špirko je uzeo jednu komponentu</description>
     </action>
     <action>
         <playerId>player-4</playerId>
         <weekNumber>2</weekNumber>
         <departmentType>LOGISTICS</departmentType>
-        <description>Ljerka je uzeo jednu komponentu</description>
+        <description>Mate je uzeo jednu komponentu</description>
     </action>
     <action>
         <playerId>player-1</playerId>
         <weekNumber>3</weekNumber>
-        <departmentType>LOGISTICS</departmentType>
-        <description>Rina je uzeo jednu komponentu</description>
-    </action>
-    <action>
-        <playerId>player-2</playerId>
-        <weekNumber>3</weekNumber>
-        <departmentType>DESIGN</departmentType>
-        <description>Frane dobio je jedan bod za dizajn</description>
-    </action>
-    <action>
-        <playerId>player-3</playerId>
-        <weekNumber>3</weekNumber>
-        <departmentType>LOGISTICS</departmentType>
-        <description>Katica je uzeo jednu komponentu</description>
-    </action>
-    <action>
-        <playerId>player-4</playerId>
-        <weekNumber>3</weekNumber>
-        <departmentType>DESIGN</departmentType>
-        <description>Ljerka dobio je jedan bod za dizajn</description>
-    </action>
-    <action>
-        <playerId>player-1</playerId>
-        <weekNumber>4</weekNumber>
-        <departmentType>LOGISTICS</departmentType>
-        <description>Rina je uzeo jednu komponentu</description>
-    </action>
-    <action>
-        <playerId>player-2</playerId>
-        <weekNumber>4</weekNumber>
-        <departmentType>DESIGN</departmentType>
-        <description>Frane dobio je jedan bod za dizajn</description>
-    </action>
-    <action>
-        <playerId>player-3</playerId>
-        <weekNumber>4</weekNumber>
-        <departmentType>LOGISTICS</departmentType>
-        <description>Katica je uzeo jednu komponentu</description>
-    </action>
-    <action>
-        <playerId>player-4</playerId>
-        <weekNumber>4</weekNumber>
-        <departmentType>DESIGN</departmentType>
-        <description>Ljerka dobio je jedan bod za dizajn</description>
-    </action>
-    <action>
-        <playerId>player-1</playerId>
-        <weekNumber>5</weekNumber>
         <departmentType>ASSEMBLY</departmentType>
-        <description>Rina sastavio je automobil City i dobio 3 boda</description>
+        <description>Mario sastavio je automobil City i dobio 3 boda</description>
+    </action>
+    <action>
+        <playerId>player-2</playerId>
+        <weekNumber>3</weekNumber>
+        <departmentType>ASSEMBLY</departmentType>
+        <description>Edita sastavio je automobil City i dobio 3 boda</description>
+    </action>
+    <action>
+        <playerId>player-3</playerId>
+        <weekNumber>3</weekNumber>
+        <departmentType>ASSEMBLY</departmentType>
+        <description>Špirko sastavio je automobil City i dobio 3 boda</description>
+    </action>
+    <action>
+        <playerId>player-4</playerId>
+        <weekNumber>3</weekNumber>
+        <departmentType>LOGISTICS</departmentType>
+        <description>Mate je uzeo jednu komponentu</description>
+    </action>
+    <action>
+        <playerId>player-1</playerId>
+        <weekNumber>4</weekNumber>
+        <departmentType>DESIGN</departmentType>
+        <description>Mario je dobio dizajnersko znanje</description>
+    </action>
+    <action>
+        <playerId>player-2</playerId>
+        <weekNumber>4</weekNumber>
+        <departmentType>DESIGN</departmentType>
+        <description>Edita je dobio dizajnersko znanje</description>
+    </action>
+    <action>
+        <playerId>player-3</playerId>
+        <weekNumber>4</weekNumber>
+        <departmentType>DESIGN</departmentType>
+        <description>Špirko je dobio dizajnersko znanje</description>
+    </action>
+    <action>
+        <playerId>player-4</playerId>
+        <weekNumber>4</weekNumber>
+        <departmentType>DESIGN</departmentType>
+        <description>Mate je dobio dizajnersko znanje</description>
+    </action>
+    <action>
+        <playerId>player-1</playerId>
+        <weekNumber>5</weekNumber>
+        <departmentType>DESIGN</departmentType>
+        <description>Mario je dobio dizajnersko znanje</description>
     </action>
     <action>
         <playerId>player-2</playerId>
         <weekNumber>5</weekNumber>
-        <departmentType>ASSEMBLY</departmentType>
-        <description>Frane sastavio je automobil SUV i dobio 5 boda</description>
+        <departmentType>DESIGN</departmentType>
+        <description>Edita je dobio dizajnersko znanje</description>
     </action>
     <action>
         <playerId>player-3</playerId>
         <weekNumber>5</weekNumber>
-        <departmentType>LOGISTICS</departmentType>
-        <description>Katica je uzeo jednu komponentu</description>
+        <departmentType>DESIGN</departmentType>
+        <description>Špirko je dobio dizajnersko znanje</description>
     </action>
     <action>
         <playerId>player-4</playerId>
         <weekNumber>5</weekNumber>
         <departmentType>DESIGN</departmentType>
-        <description>Ljerka dobio je jedan bod za dizajn</description>
+        <description>Mate je dobio dizajnersko znanje</description>
+    </action>
+    <action>
+        <playerId>player-1</playerId>
+        <weekNumber>6</weekNumber>
+        <departmentType>DESIGN</departmentType>
+        <description>Mario je dobio dizajnersko znanje</description>
+    </action>
+    <action>
+        <playerId>player-2</playerId>
+        <weekNumber>6</weekNumber>
+        <departmentType>DESIGN</departmentType>
+        <description>Edita je dobio dizajnersko znanje</description>
+    </action>
+    <action>
+        <playerId>player-3</playerId>
+        <weekNumber>6</weekNumber>
+        <departmentType>DESIGN</departmentType>
+        <description>Špirko je dobio dizajnersko znanje</description>
+    </action>
+    <action>
+        <playerId>player-4</playerId>
+        <weekNumber>6</weekNumber>
+        <departmentType>DESIGN</departmentType>
+        <description>Mate je dobio dizajnersko znanje</description>
     </action>
 </gameReplay>

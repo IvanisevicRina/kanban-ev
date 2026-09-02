@@ -16,7 +16,7 @@ public class DesignDepartment extends Department{
        player.setCurrentDepartment(DepartmentType.DESIGN);
        player.addDesignPoints();
 
-       String message = player.getName() + " dobio je jedan bod za dizajn";
+       String message = player.getName() + " je dobio dizajnersko znanje";
        return new ActionResult(true, message);
     }
 }

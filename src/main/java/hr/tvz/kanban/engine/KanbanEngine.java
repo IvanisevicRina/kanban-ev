@@ -127,6 +127,16 @@ public class KanbanEngine {
         return restoredEngine;
     }
 
+    public int findNextPlayerIndex(){
+        for (int i=0; i<gameState.getPlayers().size(); i++){
+            Player player = gameState.getPlayers().get(i);
+            if(!playerWhoActed.contains(player.getId())){
+                return i;
+            }
+        }
+        return 0;
+    }
+
 
 
 }
